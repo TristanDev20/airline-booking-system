@@ -8,14 +8,13 @@
 		<!-- Bootstrap Link -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-
 		<!-- CSS Link -->
 		<link rel="stylesheet" type="text/css" href="./index.css">
 
 		<!-- Google Font -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
@@ -24,7 +23,100 @@
 		<!-- End of FEAT001-Landing Section -->
 
 		<!-- Start of FEAT002-About Us & Explore -->
+		<!-- Start of About Us -->
+		<div class="container d-flex justify-content-center align-items-center px-5" id = "about-us">
+			<div class = "row align-items-center pt-3">
 
+				<div class = "col-12 col-md-6 order-2 order-md-1 text-center">
+					<h2 class="pt-3" id="about-us-h2">Why Choose Us</h2>
+					<p id="about-us-p">At SkyPass, we believe travel should be exciting, effortless, and accessible to everyone. That’s why we’ve built a platform that connects you to hundreds of destinations around the world, with great fares, flexible options, and a booking experience that puts you in control. Whether you’re chasing sunsets, reuniting with family, or jetting off for work, we’re here to make every journey smooth from the start. With a growing network, a passion for service, and a love of travel, we’re more than just an airline booking service — we’re your partner in adventure. 
+					<br/>
+					<br/>
+					Let’s fly, together.</p>
+				</div>
+
+				<div class = "col-12 col-md-6 order-1 order-md-2 text-center">
+					<img class="img-fluid" id = "about-us-img" src="./images/about-us.png">
+				</div>
+
+
+			</div>
+		</div>
+		<!-- End of About Us -->
+
+
+		<!-- Start of Explore -->
+		<div id="explore">
+			<div class="explore-carousel-wrapper">
+				<button class="pre-btn"><img src="images/arrow1.png"></button>
+				<button class="nxt-btn"><img src="images/arrow2.png"></button>
+
+				<h2 id="explore-h2">Explore Famous Destinations</h2>
+
+				<!-- Start of Carousel -->
+				<div class="destination-container">
+
+					<!-- 1st Card -->
+					<div class="destination-card">
+						<div class="destination-image">
+							<img src="./images/japan.jpg" class="destination-thumb">
+							<button class="card-btn">Japan</button>
+						</div>
+					</div>
+
+					<!-- 2nd Card -->
+					<div class="destination-card">
+						<div class="destination-image">
+							<img src="./images/switzerland.jpg" class="destination-thumb">
+							<button class="card-btn">Switzerland</button>
+						</div>
+					</div>
+
+					<!-- 3rd Card -->
+					<div class="destination-card">
+						<div class="destination-image">
+							<img src="./images/dubai.jpg" class="destination-thumb">
+							<button class="card-btn">Dubai</button>
+						</div>
+					</div>
+
+					<!-- 4th Card -->
+					<div class="destination-card">
+						<div class="destination-image">
+							<img src="./images/korea.jpg" class="destination-thumb">
+							<button class="card-btn">Korea</button>
+						</div>
+					</div>
+
+					<!-- 5th Card -->
+					<div class="destination-card">
+						<div class="destination-image">
+							<img src="./images/singapore.jpg" class="destination-thumb">
+							<button class="card-btn">Singapore</button>
+						</div>
+					</div>
+
+					<!-- 6th Card -->
+					<div class="destination-card">
+						<div class="destination-image">
+							<img src="./images/london.jpg" class="destination-thumb">
+							<button class="card-btn">London</button>
+						</div>
+					</div>
+
+					<!-- 7th Card -->
+					<div class="destination-card">
+						<div class="destination-image">
+							<img src="./images/canada.jpg" class="destination-thumb">
+							<button class="card-btn">Canada</button>
+						</div>
+					</div>
+				</div>
+				<!-- End  of Carousel -->
+
+			</div>
+		</div>
+		<!-- End of Explore -->
 		<!-- End of FEAT002-About Us & Explore -->
 
 		<!-- Start of FEAT003-Flight Details & FAQs -->
@@ -37,7 +129,11 @@
 
 
 		<!-- Bootstrap Script -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>		
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>	
+
+		<!-- Carousel Slider Effect -->
+		<script src="carousel.js"></script>
+	
 	</body>
 
 </html>
