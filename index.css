@@ -5,3 +5,143 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+/* Start of About us Section */
+
+#about-us {
+  margin-bottom: 50px;
+}
+
+#about-us-img{
+width: 480px;
+height: 450px;
+}
+
+#about-us-h2{
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  font-weight: 600;
+  text-align: left;
+}
+
+#about-us-p{
+  font-family: 'Open Sans', sans-serif;
+  color: #000000;
+  font-weight: 400;
+  text-align: left;
+}
+
+/* End of About us Section */
+
+
+/* Start of Explore Section */
+
+#explore-h2{
+  font-family: 'Montserrat';
+  font-style: normal;
+  color: #000000;
+  font-weight: 600;
+}
+
+.explore-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 3rem;
+  margin-bottom: 50px;
+}
+
+.destination-container {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.destination-container::-webkit-scrollbar {
+  display: none;
+}
+
+.destination-card {
+  flex: 0 0 50%; /* default: 2 per row */
+  scroll-snap-align: start;
+}
+
+@media (min-width: 768px) {
+  .destination-card {
+    flex: 0 0 33.3333%; /* 3 per row */
+  }
+}
+
+@media (min-width: 992px) {
+  .destination-card {
+    flex: 0 0 25%;; /* 4 per row */
+  }
+}
+
+
+.destination-image {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 0 15px;
+
+}
+
+.destination-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+  border-radius: 20px;
+}
+
+.destination-image:hover img {
+  transform: scale(1.1);
+}
+
+.card-btn {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 150px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.destination-image:hover .card-btn {
+  opacity: 1;
+}
+
+.pre-btn,
+.nxt-btn {
+  position: absolute;
+  top: 52%;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0);
+  z-index: 10;
+}
+
+.pre-btn {
+  left: 10px;
+}
+
+.nxt-btn {
+  right: 10px;
+}
+
+.pre-btn img,
+.nxt-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+/* End of Explore Section */
