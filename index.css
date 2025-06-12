@@ -5,3 +5,430 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/*Start of FEAT001-Landing Section*/
+#landing{
+  background-image: url(./images/bg-landing.png);
+  background-size: cover; 
+  background-repeat: no-repeat;  
+}
+
+#navbar {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  position: sticky !important;
+  top: 0;
+  z-index: 1000; 
+}
+
+.nav-text{
+  margin-left: 4rem;
+}
+
+/*Start of Navbar Hover Effect*/
+#navbar:hover,
+#navbar.scrolled {
+  background-color: white;
+  padding-bottom: 0.8rem;
+  padding-top: 0.8rem;
+}
+
+#navbar:hover #navbarContent > div > a,
+#navbar.scrolled #navbarContent > div > a {
+  color: #005696 !important;
+}
+
+#navbarContent > div > a {
+  color: white; 
+  text-decoration: none;
+  position: relative;
+}
+
+#navbarContent > div > a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; 
+  width: 0;
+  height: 2px;
+  background-color: #005696; 
+  transition: width 0.3s ease;
+}
+
+#navbarContent > div > a:hover::after {
+  width: 100%; 
+}
+
+
+#navbar:hover img,
+#navbar.scrolled img {
+  content: url('./images/logo-color.png'); 
+  height: 45px;
+}
+
+#navbar:hover #login,
+#navbar.scrolled #login {
+  background-color: white; 
+  color: #005696; 
+  border: 2px solid #005696; 
+}
+/*End of Navbar Hover Effect*/
+
+#logo{
+  margin-left: 12rem;
+}
+
+#login{
+  margin-right: 12rem;
+}
+
+#landing-text>h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 80px;
+  font-weight: 600; 
+  color: #005696;
+}
+
+#landing-text>h2{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 400; 
+  color: #062933;
+  padding-bottom: 20rem;
+
+}
+
+#search-flight {
+  box-sizing: border-box;
+  position: absolute;
+  width: 1100px;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 380px;
+  background: rgba(203, 224, 237, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 16px;
+  display: flex; 
+  flex-direction: column; 
+  gap: 16px; 
+}
+
+#first-line{
+  background: rgba(219, 234, 243, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px; 
+  width: auto;
+}
+
+#second-line{
+  background: rgba(219, 234, 243, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  width: auto;
+}
+
+.icon{
+  right: 10px; 
+  top: 75%; 
+  transform: translateY(-50%); 
+  font-size: 0.80rem;"
+}
+
+.btn-search{
+  margin-top: 7px;
+  background-color: #005696;
+  color: white;
+  font-weight: 500; 
+  width: 175px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.input2{
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  width: 200px;
+  height: 40px;
+}
+
+.input1{
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  width: 140px;
+  height: 35px;
+
+}
+.open-sans{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  overflow-x: hidden;
+}
+
+.modal-content {
+  background: white;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+  margin-top: 0;
+  position: relative;
+  overflow-y: auto;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+#logo-modal{
+  height: 40px; 
+  width: 40px;"
+}
+
+.close-btn {
+  position: absolute;
+  top: 9px;
+  right: 20px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: white;
+  padding-right: 1rem;
+  z-index: 1060;
+}
+
+#nav2{
+  background-color: #0B355D ;
+}
+
+#nav2>h1{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  font-weight: 600; 
+  margin-left: 5.7rem;
+}
+
+#text-body>h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  padding-bottom: 5rem;
+}
+
+
+#select-options{
+  border: none;
+  border-radius: none;
+  margin-bottom: 2rem;
+  font-weight: 700;
+
+}
+
+.input3{
+  border-radius: 8px;
+  height: 50px;
+}
+
+.fs-7{
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.btn-search2{
+  margin-top: 7px;
+  background-color: #0B355D;
+  color: white;
+  font-weight: 500; 
+  width: 152px;
+  height: 52px;
+  border-radius: 8px;
+}
+
+/*Start of Media Query */
+
+/* Adjustments for Medium Devices (Tablets) */
+@media (max-width: 1100px) {
+  #search-flight {
+    width: 90%;
+    top: 400px;
+  }
+
+  #first-line,
+  #second-line {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 16px;
+  }
+
+  .input1{
+    width: 20% 
+  }
+
+  .input2{
+    width: 100%;
+  }
+
+  .nav-text{
+    margin-left: 0;
+
+  }
+  #logo{
+    margin-left: 0
+  }
+
+  #login{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    margin-right: 0;
+    width: auto; 
+  }
+
+  #navbarContent{
+    text-align: center;
+  }
+}
+
+
+
+/* Adjustments for Small Devices (Mobile Phones) */
+@media (max-width: 768px) {
+  #search-flight {
+    width: 95%;
+    top: 350px;
+    padding: 8px;
+    flex-direction: column; 
+
+  }
+
+  #landing-text>h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 600; 
+    color: #005696;
+  }
+
+  #landing-text>h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400; 
+    color: #062933;
+    padding-bottom: 20rem;
+    
+  }
+
+
+  #first-line,
+  #second-line {
+    display: flex;
+    flex-direction: column; 
+    align-items: stretch; 
+    gap: 8px;
+  }
+
+  .form-check {
+    display: flex; 
+    align-items: center;
+    gap: 8px; 
+  }
+
+  #one-way, #round-trip, #multi-city  {
+    flex-shrink: 0;
+    width: 1em;
+    height: 1em;
+    
+    vertical-align: top;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1 solid black;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+
+    .icon {
+     right: 8px; 
+     top: 65%; 
+     transform: translateY(-50%); 
+     font-size: 0.80rem;"
+   }
+
+   #arrow {
+    display: none; 
+  }
+
+  .input2 {
+    width: 100%; 
+    margin-bottom: 8px;
+  }
+
+  .input1{
+    width: auto;
+    margin-bottom: 8px;
+  }
+
+  .btn-search {
+    width: 100%; 
+    margin-top: 8px; 
+    text-align: center;
+  }
+
+
+  input[type="radio"] {
+    width: auto; 
+  }
+
+
+  label {
+    width: 100%; 
+    text-align: left; 
+    display: flex; 
+    align-items: center; 
+  }
+
+  #navAbout, #navDeals, #navExplore{
+    margin: 0;
+  }
+
+  #logo{
+    margin-left: 0
+  }
+
+  .nav-text{
+    margin-left: 0;
+  }
+
+  #navbarContent > div > a {
+    margin-right: 0;
+    text-align: center;
+
+    width: 100%; 
+  }
+
+  #login {
+    width: 100%; 
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+}
+/*End of Media Query */
+
+/*End of FEAT001-Landing Section*/
