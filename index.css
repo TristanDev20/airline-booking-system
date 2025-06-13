@@ -81,6 +81,13 @@
 #signupModal .form-control {
   width: 200px !important;
 }
+
+#signupModal .modal-content {
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 255, 0.2);
+}
+
 /* Sign up design end */
 
 /* End of FEAT004-Footer and Logout/Signin */
