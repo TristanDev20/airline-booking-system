@@ -1,43 +1,504 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Airline Booking System</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Airline Booking System</title>
 
-		<!-- Bootstrap Link -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-
-		<!-- CSS Link -->
-		<link rel="stylesheet" type="text/css" href="./index.css">
-
-		<!-- Google Font -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
-	</head>
-
-	<body>
-		<!-- Start of FEAT001-Landing Section -->
-
-		<!-- End of FEAT001-Landing Section -->
-
-		<!-- Start of FEAT002-About Us & Explore -->
-
-		<!-- End of FEAT002-About Us & Explore -->
-
-		<!-- Start of FEAT003-Flight Details & FAQs -->
-
-		<!-- End of FEAT003-Flight Details & FAQs -->
-
-		<!-- Start of FEAT004-Footer and Logout/Signin -->
-
-		<!-- End of FEAT004-Footer and Logout/Signin -->
+	<!-- Bootstrap Link -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
-		<!-- Bootstrap Script -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>		
-	</body>
+	<!-- CSS Link -->
+	<link rel="stylesheet" type="text/css" href="./index.css">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<!-- Start of FEAT001-Landing Section -->
+
+	<!-- End of FEAT001-Landing Section -->
+
+	<!-- Start of FEAT002-About Us & Explore -->
+
+	<!-- End of FEAT002-About Us & Explore -->
+
+	<!-- Start of FEAT003-Flight Details & FAQs -->
+
+	<!-- Start of Flight Details -->
+	<div class="container" id="flight-details">
+		<h2 id="find-flight-details-label">Find Flight Deals</h2>
+		<div class="row">
+			<div class="col d-flex p-2 d-grid gap-3 m-2 mx-2">
+				<div class="px-1 py-2" id="radio1">
+					<div class="form-check form-check-inline p-1">
+						<input class="form-check-input m-1" type="radio" id="inlineRadio1" value="option1" name="flightCategory">
+						<label class="form-check-label" for="inlineCheckbox1">International</label>
+					</div>
+				</div>
+				<div class="px-1 py-2" id="radio2">
+					<div class="form-check form-check-inline p-1">
+						<input class="form-check-input m-1" type="radio" id="inlineRadio2" value="option2" name="flightCategory">
+						<label class="form-check-label" for="inlineCheckbox2">Domestic</label>
+					</div>
+				</div>
+				<div class="dropdown p-2">
+					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+						Economy Class
+					</button>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+						<li><a class="dropdown-item" href="#">Basic Economy</a></li>
+						<li><a class="dropdown-item" href="#">Standard Economy</a></li>
+						<li><a class="dropdown-item" href="#">Premium Economy</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="container">
+		<div class="row" id="cards-first-row">
+			<div class="col-6">
+				<div class="card">
+					<!-- Logo at the top of the card -->
+					
+						<img src="./images/card-logo.png" alt="Airline Logo" class="airline-logo">
+					<br>
+
+					<div class="card-body"	>
+						<div class="row g-0">
+							<!-- First column -->
+							<div class="col-4 position-relative ">
+								<div class="p-3 text-center">
+									<h3 class="time">10:30</h3>
+									<p class="airport-code">KUL</p>
+									<p class="airport-name">Kuala Lumpur</p>
+								</div>
+							</div>
+
+							<!-- Second column -->
+							<div class="col-4 position-relative">
+								<div class="p-3 text-center">
+									<h3 class="time">20:20</h3>
+									<p class="airport-code">MEL</p>
+									<p class="airport-name">Melbourne Airport</p>
+								</div>
+							</div>
+
+							<!-- Third column -->
+							<div class="col-4 position-relative">
+								<div class="p-3 text-center">
+									<h3 class="fare-label">Fare</h3>
+									<p class="fare-price">&#8369;8,000</p>
+									<br>
+									<button type="button" class="px-5 select-btn">Select</button>
+								</div>
+							</div>
+
+							<!-- Small image between col-1 and col-2 -->
+							<img src="./images/card-airplane.png" alt="Plane" class="small-image-1">
+
+							<!-- Vertical line between col-2 and col-3 -->
+							<div class="vertical-line"></div>
+						</div>
+					</div>
+				</div>
+			</div>		
+			<div class="col-6">
+				<div class="card">
+					<!-- Logo at the top of the card -->
+					
+						<img src="./images/card-logo.png" alt="Airline Logo" class="airline-logo">
+					<br>
+
+					<div class="card-body"	>
+						<div class="row g-0">
+							<!-- First column -->
+							<div class="col-4 position-relative ">
+								<div class="p-3 text-center">
+									<h3 class="time">10:30</h3>
+									<p class="airport-code">KUL</p>
+									<p class="airport-name">Kuala Lumpur</p>
+								</div>
+							</div>
+
+							<!-- Second column -->
+							<div class="col-4 position-relative">
+								<div class="p-3 text-center">
+									<h3 class="time">20:20</h3>
+									<p class="airport-code">MEL</p>
+									<p class="airport-name">Melbourne Airport</p>
+								</div>
+							</div>
+
+							<!-- Third column -->
+							<div class="col-4 position-relative">
+								<div class="p-3 text-center">
+									<h3 class="fare-label">Fare</h3>
+									<p class="fare-price">&#8369;8,000</p>
+									<br>
+									<button type="button" class="px-5 select-btn">Select</button>
+								</div>
+							</div>
+
+							<!-- Small image between col-1 and col-2 -->
+							<img src="./images/card-airplane.png" alt="Plane" class="small-image-1">
+
+							<!-- Vertical line between col-2 and col-3 -->
+							<div class="vertical-line"></div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<br>
+		<br>
+		<div class="row" id="cards-second-row">
+			<div class="col-6" >
+				<div class="card">
+					<!-- Logo at the top of the card -->
+					
+						<img src="./images/card-logo.png" alt="Airline Logo" class="airline-logo">
+					<br>
+
+					<div class="card-body"	>
+						<div class="row g-0">
+							<!-- First column -->
+							<div class="col-4 position-relative ">
+								<div class="p-3 text-center">
+									<h3 class="time">10:30</h3>
+									<p class="airport-code">KUL</p>
+									<p class="airport-name">Kuala Lumpur</p>
+								</div>
+							</div>
+
+							<!-- Second column -->
+							<div class="col-4 position-relative">
+								<div class="p-3 text-center">
+									<h3 class="time">20:20</h3>
+									<p class="airport-code">MEL</p>
+									<p class="airport-name">Melbourne Airport</p>
+								</div>
+							</div>
+
+							<!-- Third column -->
+							<div class="col-4 position-relative">
+								<div class="p-3 text-center">
+									<h3 class="fare-label">Fare</h3>
+									<p class="fare-price">&#8369;8,000</p>
+									<br>
+									<button type="button" class="px-5 select-btn">Select</button>
+								</div>
+							</div>
+
+							<!-- Small image between col-1 and col-2 -->
+							<img src="./images/card-airplane.png" alt="Plane" class="small-image-1">
+
+							<!-- Vertical line between col-2 and col-3 -->
+							<div class="vertical-line"></div>
+						</div>
+					</div>
+				</div>
+			</div>		
+			<div class="col-6">
+				<div class="card">
+					<!-- Logo at the top of the card -->
+					
+						<img src="./images/card-logo.png" alt="Airline Logo" class="airline-logo">
+					<br>
+
+					<div class="card-body"	>
+						<div class="row g-0">
+							<!-- First column -->
+							<div class="col-4 position-relative ">
+								<div class="p-3 text-center">
+									<h3 class="time">10:30</h3>
+									<p class="airport-code">KUL</p>
+									<p class="airport-name">Kuala Lumpur</p>
+								</div>
+							</div>
+
+							<!-- Second column -->
+							<div class="col-4 position-relative">
+								<div class="p-3 text-center">
+									<h3 class="time">20:20</h3>
+									<p class="airport-code">MEL</p>
+									<p class="airport-name">Melbourne Airport</p>
+								</div>
+							</div>
+
+							<!-- Third column -->
+							<div class="col-4 position-relative">
+								<div class="p-3 text-center">
+									<h3 class="fare-label">Fare</h3>
+									<p class="fare-price">&#8369;8,000</p>
+									<br>
+									<button type="button" class="px-5 select-btn">Select</button>
+								</div>
+							</div>
+
+							<!-- Small image between col-1 and col-2 -->
+							<img src="./images/card-airplane.png" alt="Plane" class="small-image-1">
+
+							<!-- Vertical line between col-2 and col-3 -->
+							<div class="vertical-line"></div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<br>
+		<br>
+		<div class="row" id="cards-third-row">
+			<div class="col-6">
+				<div class="card">
+					<!-- Logo at the top of the card -->
+					
+						<img src="./images/card-logo.png" alt="Airline Logo" class="airline-logo">
+					<br>
+
+					<div class="card-body"	>
+						<div class="row g-0">
+							<!-- First column -->
+							<div class="col-4 position-relative ">
+								<div class="p-3 text-center">
+									<h3 class="time">10:30</h3>
+									<p class="airport-code">KUL</p>
+									<p class="airport-name">Kuala Lumpur</p>
+								</div>
+							</div>
+
+							<!-- Second column -->
+							<div class="col-4 position-relative">
+								<div class="p-3 text-center">
+									<h3 class="time">20:20</h3>
+									<p class="airport-code">MEL</p>
+									<p class="airport-name">Melbourne Airport</p>
+								</div>
+							</div>
+
+							<!-- Third column -->
+							<div class="col-4 position-relative">
+								<div class="p-3 text-center">
+									<h3 class="fare-label">Fare</h3>
+									<p class="fare-price">&#8369;8,000</p>
+									<br>
+									<button type="button" class="px-5 select-btn">Select</button>
+								</div>
+							</div>
+
+							<!-- Small image between col-1 and col-2 -->
+							<img src="./images/card-airplane.png" alt="Plane" class="small-image-1">
+
+							<!-- Vertical line between col-2 and col-3 -->
+							<div class="vertical-line"></div>
+						</div>
+					</div>
+				</div>
+			</div>		
+			<div class="col-6">
+				<div class="card">
+					<!-- Logo at the top of the card -->
+					
+						<img src="./images/card-logo.png" alt="Airline Logo" class="airline-logo">
+					<br>
+
+					<div class="card-body"	>
+						<div class="row g-0">
+							<!-- First column -->
+							<div class="col-4 position-relative ">
+								<div class="p-3 text-center">
+									<h3 class="time">10:30</h3>
+									<p class="airport-code">KUL</p>
+									<p class="airport-name">Kuala Lumpur</p>
+								</div>
+							</div>
+
+							<!-- Second column -->
+							<div class="col-4 position-relative">
+								<div class="p-3 text-center">
+									<h3 class="time">20:20</h3>
+									<p class="airport-code">MEL</p>
+									<p class="airport-name">Melbourne Airport</p>
+								</div>
+							</div>
+
+							<!-- Third column -->
+							<div class="col-4 position-relative">
+								<div class="p-3 text-center">
+									<h3 class="fare-label">Fare</h3>
+									<p class="fare-price">&#8369;8,000</p>
+									<br>
+									<button type="button" class="px-5 select-btn">Select</button>
+								</div>
+							</div>
+
+							<!-- Small image between col-1 and col-2 -->
+							<img src="./images/card-airplane.png" alt="Plane" class="small-image-1">
+
+							<!-- Vertical line between col-2 and col-3 -->
+							<div class="vertical-line"></div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>				
+	<!-- End of Flight Details -->
+	<!-- Start of FAQs-->
+	<br>
+	<br>
+	<div class="container">
+		<h2 id="">Our Frequently Asked Questions (FAQs)</h2>
+		<div class="row">
+			<!-- Left Column -->
+			<div class="col-md-6">
+				<div class="accordion" id="accordionLeft">
+					<!-- Item 1 -->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingL1">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseL1">
+								How do I book a flight online?
+							</button>
+						</h2>
+						<div id="collapseL1" class="accordion-collapse collapse" data-bs-parent="#accordionLeft">
+							<div class="accordion-body">You can book online through our platform by selecting your destination and date.</div>
+						</div>
+					</div>
+
+					<!-- Item 2 -->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingL2">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseL2">
+								Can I reserve a ticket and pay later?
+							</button>
+						</h2>
+						<div id="collapseL2" class="accordion-collapse collapse" data-bs-parent="#accordionLeft">
+							<div class="accordion-body">Yes, we offer ticket reservations with payment deadlines based on the airline's policy.</div>
+						</div>
+					</div>
+
+					<!-- Item 3 -->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingL3">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseL3">
+								What payment methods are accepted?
+							</button>
+						</h2>
+						<div id="collapseL3" class="accordion-collapse collapse" data-bs-parent="#accordionLeft">
+							<div class="accordion-body">Cash, Cheque, Bank Transfer, Credit and Debit Card.</div>
+						</div>
+					</div>
+
+					<!-- Item 4 -->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingL4">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseL4">
+								Can I change or cancel my booking?
+							</button>
+						</h2>
+						<div id="collapseL4" class="accordion-collapse collapse" data-bs-parent="#accordionLeft">
+							<div class="accordion-body">Yes, just make sure to enter the correct passenger details during booking.</div>
+						</div>
+					</div>
+
+					<!-- Item 5 -->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingL5">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseL5">
+								Are there any fees for flight changes or cancellations?
+							</button>
+						</h2>
+						<div id="collapseL5" class="accordion-collapse collapse" data-bs-parent="#accordionLeft">
+							<div class="accordion-body">Contact our support team immediately. Some airlines allow corrections within 24 hours.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Right Column -->
+			<div class="col-md-6">
+				<div class="accordion" id="accordionRight">
+					<!-- Item 1 -->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingR1">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR1">
+								How do I reschedule my flight?
+							</button>
+						</h2>
+						<div id="collapseR1" class="accordion-collapse collapse" data-bs-parent="#accordionRight">
+							<div class="accordion-body">Rescheduling is available under “Manage Booking” or via customer service.</div>
+						</div>
+					</div>
+
+					<!-- Item 2 -->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingR2">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR2">
+								What is the refund policy for cancelled booking?
+							</button>
+						</h2>
+						<div id="collapseR2" class="accordion-collapse collapse" data-bs-parent="#accordionRight">
+							<div class="accordion-body">Refunds depend on the fare type. Non-refundable tickets are not eligible unless waived by airline.</div>
+						</div>
+					</div>
+
+					<!-- Item 3 -->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingR3">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR3">
+								How do I retrieve my booking confirmation?
+							</button>
+						</h2>
+						<div id="collapseR3" class="accordion-collapse collapse" data-bs-parent="#accordionRight">
+							<div class="accordion-body">Please check you booking details by entering you flight number in this website, if you have in trouble kindly contact our support team immediately</div>
+						</div>
+					</div>
+
+					<!-- Item 4 -->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingR4">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR4">
+								What should I do if I didn’t receive my e-ticket?
+							</button>
+						</h2>
+						<div id="collapseR4" class="accordion-collapse collapse" data-bs-parent="#accordionRight">
+							<div class="accordion-body">Our customer service is available via chat, email, or hotline 24/7.</div>
+						</div>
+					</div>
+
+					<!-- Item 5 -->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingR5">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseR5">
+								How can I update my contact details on an existing booking?
+							</button>
+						</h2>
+						<div id="collapseR5" class="accordion-collapse collapse" data-bs-parent="#accordionRight">
+							<div class="accordion-body">Our customer service is available via chat, email, or hotline 24/7.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>	
+
+	<!-- End of FAQs-->
+
+
+	<!-- End of FEAT003-Flight Details & FAQs -->
+
+	<!-- Start of FEAT004-Footer and Logout/Signin -->
+
+	<!-- End of FEAT004-Footer and Logout/Signin -->
+
+
+	<!-- Bootstrap Script -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>		
+</body>
 
 </html>
