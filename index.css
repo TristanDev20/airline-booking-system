@@ -751,3 +751,89 @@ h2 {
   font-family: 'Work Sans', sans-serif;
 }
 /*End of FAQs*/
+
+/* Start of FEAT004-Footer and Logout/Signin */
+
+/* footer background */
+
+.gradient-background {
+  background: linear-gradient(300deg, #1e3a8a, #8a2be2, #00bfff); /* Blue, Purple, Sky Blue */
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.grey-background {
+  background-color: #f2f2f2;
+}
+
+.logo-layout {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  height: 50px;
+}
+
+/* end of footer background */
+
+/* Login design start */
+
+#loginModal .modal-header {
+  border: none;
+  padding-bottom: 0;
+  padding-left: 40px;
+}
+#loginModal .modal-header h2 {
+  padding-top: 0;
+}
+#loginModal .modal-header p {
+  padding-top: 0;
+}
+#loginModal .modal-dialog {
+  max-width: 400px;
+  max-height: auto;
+}
+#loginModal .modal-content {
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 255, 0.2);
+}
+
+/* Login design end */
+
+/* Sign up design start */
+
+#signupModal .modal-header {
+  border: none;
+  padding-bottom: 0;
+  padding-left: 40px;
+}
+
+#signupModal .modal-dialog {
+  max-width: 500px;
+  max-height: auto;
+}
+
+#signupModal .form-control {
+  width: 200px !important;
+}
+
+#signupModal .modal-content {
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 255, 0.2);
+}
+
+/* Sign up design end */
+
+/* End of FEAT004-Footer and Logout/Signin */
