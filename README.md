@@ -1,10 +1,14 @@
 # Technical Specifications Document
 
 ## 1. Title Page
-- **Project Name**: Simple E-commerce Application
+- **Project Name**: Simple Airline Booking System Application
 - **Version**: 1.0
-- **Date**: June 20, 2024
-- **Author(s)**: Bootcamp Group
+- **Date**: May 05, 2025
+- **Author(s)**: 
+    - Mr. Tristan James A. Flordeliza
+    - Mr. Jether Paul Quintana
+    - Ms. Clarissa Isis A. Salvador
+    - Ms. Francheska Clair A. Salvador
 
 ## 2. Table of Contents
 1. [Introduction](#3-introduction)
@@ -19,24 +23,21 @@
 10. [Appendices](#12-appendices)
 
 ## 3. Introduction
-- **Purpose**: To develop a simple e-commerce application that allows users to browse a catalog, add items to a cart, checkout, and make payments.
-- **Scope**: The application will include user registration, product catalog, shopping cart, checkout process, and integration with a payment gateway. It will not include advanced features such as user reviews or order tracking.
+- **Purpose**: To develop a simple airline booking system application that allows users to search, book and retrieve flight details.  
+- **Scope**: The application will include user registration, login/logout, flight details, explore places with prices and FAQs
 - **Definitions, Acronyms, and Abbreviations**: 
   - **SKU**: Stock Keeping Unit
   - **API**: Application Programming Interface
 - **References**: None
 
 ## 4. Overall Description
-- **Product Perspective**: The application is a standalone web app for small businesses to sell products online.
+- **Product Perspective**: The application is a standalone web app for airline booking businesses 
 - **Product Functions**: 
   - User registration and login
-  - Product browsing and search
-  - Shopping cart management
-  - Checkout process
-  - Payment processing
+  - 
 - **User Classes and Characteristics**: 
-  - **End Users**: Customers who will browse and purchase products.
-  - **Admin Users**: Business owners or employees who will manage the catalog and view orders.
+  - **End Users**: Customers who will book a flight.
+  - **Admin Users**: 
 - **Operating Environment**: 
   - **Client**: Modern web browsers (Chrome, Firefox, Safari)
   - **Server**: Node.js backend, MongoDB database

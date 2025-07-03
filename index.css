@@ -603,7 +603,6 @@ height: 450px;
   overflow: visible;
   width: 100%;
   max-width: 600px;
-  border-radius: 25px;
   border-style: groove;
   border-color: #A5BFCC;
   border-width: thin;
@@ -703,6 +702,8 @@ height: 450px;
   cursor: pointer;
   transition: all 0.2s ease;
   color: #003366 ;
+  width: 100%;           
+  max-width: 100%;       
 }
 
 .select-btn:hover {
