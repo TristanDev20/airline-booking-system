@@ -26,7 +26,6 @@
 - **Purpose**: To develop a simple airline booking system application that allows users to search, book and retrieve flight details.  
 - **Scope**: The application will include user registration, login/logout, flight details, explore places with prices and FAQs
 - **Definitions, Acronyms, and Abbreviations**: 
-  - **SKU**: Stock Keeping Unit
   - **API**: Application Programming Interface
 - **References**: None
 
@@ -34,10 +33,20 @@
 - **Product Perspective**: The application is a standalone web app for airline booking businesses 
 - **Product Functions**: 
   - User registration and login
-  - 
+  - User View - Discover Flights
+  - Contact Page
+  - User View - Book a flight
+  - User View - View Flights
+  - User View - Flights Status
+  - User View - Update Flights
+  - User View - Check-in to booked Flight
+  - User View - View Flight Bookings
+  - Search Flights by destination and/or date
+  - User View - Flight Confirmation Screen
+  - User View - Payment Screen 
 - **User Classes and Characteristics**: 
   - **End Users**: Customers who will book a flight.
-  - **Admin Users**: 
+  - **Admin Users**: Users who will manage available flights and other setups
 - **Operating Environment**: 
   - **Client**: Modern web browsers (Chrome, Firefox, Safari)
   - **Server**: Node.js backend, MongoDB database
@@ -46,15 +55,10 @@
   - Payment gateway API (e.g., Stripe) is available and functional.
 
 ## 5. Visual Mockup Reference
-- **Link or Screenshot**: ![Mockup](mockup_link.png)
+- **Link or Screenshot**: [Login_mockup.png], [Airline_Booking_mockup.png]
 
 ## 6. Features
 - **User Registration and Login**: Users can create accounts and log in.
-- **Product Catalog**: Users can browse products by categories.
-- **Search Functionality**: Users can search for products.
-- **Shopping Cart**: Users can add, remove, and update products in their cart.
-- **Checkout Process**: Users can enter shipping information and review their order.
-- **Payment Gateway Integration**: Users can make payments securely using a payment gateway.
 
 ## 7. Functional Requirements
 ### Use Cases
@@ -91,13 +95,19 @@
 
 ## 9. Data Requirements
 - **Data Models**: 
-  - **User**: { id, email, password_hash }
-  - **Product**: { id, name, description, price, category, stock }
-  - **Order**: { id, user_id, product_ids, total_price, shipping_info, status }
+  - **User**: { userId, firstName, lastName, isAdmin, phoneNumber, dateOfBirth, gender, username, email, password, isActive, dateCreated }
+  - **Flight Details**: {flightid, flightNo, airlineName, originAirportID, destinationAirportId, departureTime, arrivalTime, aircraftId, status}
+  - **Airport**: {airportId, code, name, city, country}
+  - **Aircraft**: {aircraftId, model, seatCapacity, airlineName}
+  - **Flight Booking**: {bookingId, userId, flightId, bookingDate, seatNumber, class, status}
+  - **Check-in**: {checkinId, bookingId, checkinTime, boardingPassNumber, baggageCount}
+  - **Payment**: {paymentId, bookingId, paymentMethod, amount, currency, paymentDate, paymentStatus}
+
+  
 - **Database Requirements**: 
-  - Use MongoDB for storing user, product, and order data.
+  - Use MongoDB for storing user, flight details, flight booking, check-in, payment, airport, aircraft data.
 - **Data Storage and Retrieval**: 
-  - Users can retrieve their account and order information.
+  - Users can retrieve their account and flights information.
 
 ## 10. External Interface Requirements
 - **User Interfaces**: 
