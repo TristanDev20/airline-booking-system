@@ -99,7 +99,7 @@
   - **Flight Details**: {flightid, flightNo, airlineName, originAirportID, destinationAirportId, departureTime, arrivalTime, aircraftId, status}
   - **Airport**: {airportId, code, name, city, country}
   - **Aircraft**: {aircraftId, model, seatCapacity, airlineName}
-  - **Flight Booking**: {bookingId, userId, flightId, bookingDate, seatNumber, class, status}
+  - **Flight Booking**: {bookingId, userId, flightId, bookingDate, seatNumber, class, status, tripType, fareType, totalPrice}
   - **Check-in**: {checkinId, bookingId, checkinTime, boardingPassNumber, baggageCount}
   - **Payment**: {paymentId, bookingId, paymentMethod, amount, currency, paymentDate, paymentStatus}
 
