@@ -59,7 +59,15 @@
 
 ## 6. Features
 - **User Registration and Login**: Users can create accounts and log in.
-
+- **Discover Flights**: Users can view flight details 
+- **Book a Flights**: Users can book a flight
+- **Flight Status**: Users can retrieve their flight with a status
+- **Update Flights**: Users allowed to update flights 
+- **Check-in to booked Flight**: Users should check in to their booked flight
+- **View Flight booking**: Users can retrieve their flight bookings
+- **Search Flights**: Users can search flights by destination and/or date
+- **Flight Confirmation Screen**: Users should confirm their flight thru a screen 
+- **Payment Screen**: Users can able to pay
 ## 7. Functional Requirements
 ### Use Cases
 - **Use Case 1**: User Registration
