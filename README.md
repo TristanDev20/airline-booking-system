@@ -78,6 +78,15 @@
   - **Postconditions**: User account is created and user is logged in.
   - **Main Flow**: User enters email and password > User clicks "Register" > System creates account and logs in user.
   - **Alternate Flows**: User enters invalid email > System shows error.
+-**User Case 2**: Discover Flights
+  -**Title**: View available flights
+  -**Description**: Users can browse flights and details.
+  -**Actors**: End User
+  -**Preconditions**: User is logged in.
+  -**Postconditions**: User sees flight schedules and details.
+  -**Main Flow**: 1. User navigates to "Discover Flights". 2. System retrieves all available flights. 3. System displays flights with airline, origin, destination, times, and status.
+  -**Alternate Flows**: No flights available → Show "No flights found".
+
 
 ### System Features
 - **Feature 1**: User Registration and Login
@@ -87,6 +96,69 @@
   - **Processing**: Validate input, create user account
   - **Outputs**: User is logged in
   - **Error Handling**: Show error messages for invalid input
+-**Feature 2**: Discover Flights
+  -**Description**: Users can view available flights and details.
+  -**Priority**: [leave blank]
+  -**Inputs**: None (optional: filters like date, origin, destination).
+  -**Processing**: Fetch from Flight Details table → join with Airport and Aircraft for more info.
+  -**Outputs**: List of flights (flightNo, airlineName, origin, destination, departure, arrival, status).
+  -**Error Handling**: Show message if no flights are available.
+-**Feature 3**: Search Flights
+  -**Description**: Users can search flights by destination and/or date.
+  -**Priority**: [leave blank]
+  -**Inputs**: originAirport, destinationAirport, departureDate, returnDate (for round trips).
+  -**Processing**: Query Flight Details filtered by inputs.
+  -**Outputs**: Filtered flight list.
+  -**Error Handling**: Invalid search criteria.Show "No flights found"" if none match."
+-**Feature 4**: Book a Flight
+  -**Description**: Users can book a flight.
+  -**Priority**: [leave blank]
+  -**Inputs**: flightId, userId, class (Economy/Business), seatNumber (if selected), tripType, fareType.
+  -**Processing**: Validate flight availability and seat capacity from Aircraft. Insert booking into Flight Booking with status = PENDING, bookingDate = now. Calculate totalPrice based on fare/class.
+  -**Outputs**: Booking confirmation with bookingId.
+  -**Error Handling**: Flight not found or full. Invalid inputs (seat not available).
+-**Feature 5**: Flight Confirmation Screen
+  -**Description**: Users confirm their booking before payment.
+  -**Priority**: [leave blank]
+  -**Inputs**: bookingId.
+  -**Processing**: Retrieve booking + flight details → display summary (flightNo, departure, arrival, price, seat, class).
+  -**Outputs**: Confirmation screen with "Proceed to Payment" option.
+  -**Error Handling**: Invalid bookingId. Booking already confirmed/cancelled.
+-**Feature 6**: Payment Screen
+  -**Description**: Users pay for their confirmed booking.
+  -**Priority**: [leave blank]
+  -**Inputs**: bookingId, paymentMethod, amount, currency.
+  -**Processing**: Validate booking status = PENDING. Process payment (mock or real gateway). Insert into Payment with paymentStatus = SUCCESS/FAILED. Update Flight Booking status = CONFIRMED if payment successful.
+  -**Outputs**: Payment receipt + booking status.
+  -**Error Handling**: Payment failed/declined. Amount mismatch.
+-**Feature 7**: View Flight Booking
+  -**Description**: Users can view their past and upcoming bookings.
+  -**Priority**: [leave blank]
+  -**Inputs**: userId (from session).
+  -**Processing**: Fetch all Flight Booking for user → join with Flight Details.
+  -**Outputs**: List of bookings (flightNo, status, seat, payment info).
+  -**Error Handling**: No bookings found.
+-**Feature 8**: Flight Status
+  -**Description**: Users can retrieve real-time flight status.
+  -**Priority**: [leave blank]
+  -**Inputs**: flightId OR flightNo.
+  -**Processing**: Look up Flight Details → return status (Scheduled, Boarding, Departed, Delayed, Cancelled, Arrived).
+  -**Outputs**: Flight status screen.
+  -**Error Handling**: Flight not found.
+-**Feature 9**: Check-in to Booked Flight
+  -**Description**: Users check in online and get a boarding pass.
+  -**Priority**: [leave blank]
+  -**Inputs**: bookingId, baggageCount.
+  -**Processing**: Validate booking = CONFIRMED. Assign seat if not yet selected. Create Check-in record with checkinTime = now, boardingPassNumber = auto-generated.
+  -**Outputs**: Digital boarding pass + seat assignment.
+  -**Error Handling**: Invalid booking or already checked in. Check-in closed (time restriction).
+-**Feature 10**: Check-in to Booked Flight
+  -**Description**: Users check in online and get a boarding pass.
+  -**Priority**: [leave blank]
+  -**Inputs**: bookingId, baggageCount.
+  -**Processing**: Validate booking = CONFIRMED. Assign seat if not yet selected. Create Check-in record with checkinTime = now, boardingPassNumber = auto-generated.
+  -**Outputs**: Digital boarding pass + seat assignment.
+  -**Error Handling**: Invalid booking or already checked in. Check-in closed (time restriction).
 
 ## 8. Non-Functional Requirements
 - **Performance**: 
@@ -109,7 +181,7 @@
   - **Aircraft**: {aircraftId, model, seatCapacity, airlineName}
   - **Flight Booking**: {bookingId, userId, flightId, bookingDate, seatNumber, class, status, tripType, fareType, totalPrice}
   - **Check-in**: {checkinId, bookingId, checkinTime, boardingPassNumber, baggageCount}
-  - **Payment**: {paymentId, bookingId, paymentMethod, amount, currency, paymentDate, paymentStatus}
+  - **Payment**: {paymentId, bookingId, paymentMethod, amount, currency, paymenwqtDate, paymentStatus}
 
   
 - **Database Requirements**: 
