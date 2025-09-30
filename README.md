@@ -192,10 +192,7 @@
 ## 10. External Interface Requirements
 - **User Interfaces**: 
   - Registration/Login page
-  - Product Catalog page
-  - Product Detail page
-  - Shopping Cart page
-  - Checkout page
+  - 
 - **API Interfaces**: 
   - Payment gateway API (e.g., Stripe API) for processing payments.
 - **Hardware Interfaces**: 
